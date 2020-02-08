@@ -29,6 +29,15 @@ body {
 	font-size: 48px;
 	text-transform: uppercase;
 	color:#fff;
+/*	transition-property: all;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;
+	transition-delay: 3s;*/
+	transition: all  0.3s linear 0.3s;
+}
+.nav-a:hover {
+	color:red;
+	opacity: 0.5;
 }
 .logo{
 	top:37px;
@@ -41,6 +50,13 @@ body {
 	width: 600px;
 	height: 550px;
 	background-color: #fff;
+	transition: all  0.3s linear 0.3s;
+}
+.white-box:hover {
+	background-color: grey;
+}
+.white-box:hover .green-wraper{
+	background-color: yellow;
 }
 .green-wraper{
 	top:50%;
@@ -49,19 +65,51 @@ body {
 	background-color: green;
 	width:300px;
 	height: 300px;
+	transition: all  0.3s linear 0.3s;
+	animation: myanimation 3s infinite;
+}
+.green-wraper:hover {
+	top:50%;
+	left: 50%;
+	/*transform: translate(-50%,-50%) scaleX(1.5)  skew(20deg,15deg);*/
 }
 .title{
 	top:50%;
 	left: 50%;
-	transform: translate(-50%,-50%) rotate(45deg) ;
+	transform: translate(-50%,-50%) rotate(45deg);
     color: yellow;
     text-transform: uppercase;
     white-space: nowrap;
     font-size: 39px;
+    transition: all  0.3s linear 0.3s;
+}
+.white-box:hover .title {
+	color: red;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%) rotate(0deg);
 }
 .read-more{
 	bottom: 0;
 	right: 20px;
 	text-transform: uppercase;
 	color: green;
+	/*transition: all  0.3s linear 3s;*/
+}
+.read-more:hover {
+	color: red;
+	right:50px;
+}
+.created {
+	right:10px;
+	bottom: 17px;
+	text-transform: uppercase;
+	color: yellow;
+}
+
+
+
+@keyframes myanimation {
+  from {top: 0px; background-color: yellow; transform: translate(-50%,-50%) rotate(45deg);}
+  to {top: 200px;background-color: aqua; transform: translate(-50%,-50%) rotate(-45deg);}
 }
